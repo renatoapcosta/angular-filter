@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+</head>
+
+<body ng-app="app">
+		
+
+	<div ng-controller="firstCtrl">
+		  
+		<!-- <input type="radio" ng-model="nomeModel" ng-value="false">False
+		<input type="radio" ng-model="nomeModel" ng-value="true">True -->
+   	  
+	  	<select ng-model="nomeModel" ng-options="x.value as x.text for x in items">
+   		  <option value>Todos</option>
+   	  	</select>
+	  
+   	  	<br/>
+   	  	<hr/>
+		  
+	    <li ng-repeat="message in messages |  filter:{queried:nomeModel  }  ">{{message}}</li>
+		
+		
+		
+	</div>
+
+	
+	
+	<script src="angular.min.js" ></script>
+	<script src="script.js" ></script>
+	
+</body>
+</html>
